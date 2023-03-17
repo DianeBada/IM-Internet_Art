@@ -1,0 +1,92 @@
+window.addEventListener('load', () => {
+	const reloadTime = 30000; // 30 seconds
+	setTimeout(() => {
+	  location.reload();
+	}, reloadTime);
+  });
+  
+  const phrasesContainer = document.querySelector('.phrases-container');
+  const title = "Beauty in Student Chaos";
+  const phrasesToShow = 10;
+  const maxWordsPerPhrase = 15;
+  
+  const getRandomPositionInCircle = (radius) => {
+	const angle = Math.random() * Math.PI * 2;
+	const x = Math.cos(angle) * radius;
+	const y = Math.sin(angle) * radius;
+	return { x, y };
+  };
+  
+  const addPhrases = async () => {
+	const phrases = await getRedditPosts('college', 'top');
+	const numPhrasesToShow = Math.min(phrases.length, phrasesToShow);
+	const titleElement = document.createElement('div');
+	titleElement.classList.add('title');
+	titleElement.textContent = title;
+	phrasesContainer.appendChild(titleElement);
+  
+	const radius = 400;
+	const center = { x: phrasesContainer.offsetWidth / 2, y: phrasesContainer.offsetHeight / 2 };
+  
+	const usedPositions = [];
+	for (let i = 0; i < numPhrasesToShow; i++) {
+  
+	  let position = getRandomPositionInCircle(radius);
+	  while (usedPositions.some(p => Math.sqrt((p.x - position.x) ** 2 + (p.y - position.y) ** 2) < 150)) {
+		position = getRandomPositionInCircle(radius);
+		console.log("Phrase " + i + " added.")
+	  }
+	  usedPositions.push(position);
+	
+	  const phraseElement = document.createElement('div');
+  phraseElement.classList.add('phrase', 'glitch');
+  phraseElement.textContent = phrases[i];
+  
+  
+	  phraseElement.style.left = `${center.x + position.x - 50}px`; // subtract 200 from x position
+	  phraseElement.style.top = `${center.y + position.y}px`;
+	  phraseElement.addEventListener('click', () => {
+		phraseElement.style.display = 'none';
+		setTimeout(() => {
+		  phraseElement.style.display = 'block';
+		}, 5000);
+	
+		const backgroundColorElement = document.querySelector('.background-color');
+		backgroundColorElement.style.opacity = 1;
+		setTimeout(() => {
+		  backgroundColorElement.style.opacity = 0;
+		}, 2000);
+	  });
+	
+	  phrasesContainer.appendChild(phraseElement);
+	}
+  };
+  
+  
+  const getRedditPosts = async (subreddit, sort) => {
+	const headers = {
+	  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+	};
+	const limit = phrasesToShow; // set the limit to phrasesToShow variable
+	  const url = `https://www.reddit.com/r/${subreddit}/${sort}.json?limit=${limit}`;
+	  const response = await fetch(url, { headers });
+	  const data = await response.json();
+	  const posts = data.data.children.map((post) => post.data.title);
+	return posts.filter(phrase => phrase.split(' ').length <= maxWordsPerPhrase);
+  };
+  
+  (async () => {
+	await addPhrases();
+  })();
+  
+  
+  Containing the phrases within the borders of the page: You could modify the getRandomPosition function to ensure that the generated positions are within the bounds of the page by adjusting the minimum and maximum values for x and y.
+
+Bouncing phrases off the edges of the page: You could modify the updatePhrases function to check if a phrase element's x or y position exceeds the bounds of the page and, if so, reverse the corresponding velocity to make the phrase bounce off the edge.
+
+Making clicked phrases disappear: You already have this functionality in place with the click event listener and the remove() method, so this should work as intended.
+
+Making the title and background more visible over time: To achieve this, you could add a counter that tracks the number of phrases that have been clicked, and then modify the CSS properties of the title and background elements to increase their opacity or decrease the opacity of the phrase elements as the counter increases.
+
+
+I want to have many many phrases, let's say about 30 to 40 zooming in different directions of the page, but it has to be contained within the borders of the page. Bouncing in different directions, almost covering the background the title present. Users must get ahold of the phrases, click it and then it disappears, as they continue to do that, it becomes less chaotic on the webpage and then the title (presented by the h1 tags) and the background images become more visible
