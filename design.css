@@ -2,6 +2,8 @@ body {
     background-image: url("/images/website\ Art\ 2.png");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: scroll; /* enable vertical scrolling */
+
   }
   
   .design-title-container {
@@ -144,4 +146,60 @@ body {
       *,*::before,*::after {
         box-sizing: border-box;
       }
-     
+     /* Style for the button container */
+.button-container-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+
+/* Style for the buttons */
+.button {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the left button */
+.button-left-bottom {
+  margin-right: auto;
+}
+
+/* Style for the right button */
+.button-right-bottom {
+  margin-left: auto;
+}
+
+/* Style for the icon in the buttons */
+.fa-arrow-left,
+.fa-arrow-right {
+  margin-right: 10px;
+}
+
+.styleguide-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers items horizontally */
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers items horizontally */
+  margin-bottom: 50px; /* adds space between items */
+}
+
+.item img {
+  max-width: 100%; /* ensures image fits within its container */
+}
+
+.item p {
+  text-align: center; /* centers text within its container */
+}
