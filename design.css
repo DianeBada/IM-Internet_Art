@@ -5,6 +5,12 @@ body {
     overflow-y: scroll; /* enable vertical scrolling */
 
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
   .navbar {
     background-color: #333;
     overflow: hidden;
