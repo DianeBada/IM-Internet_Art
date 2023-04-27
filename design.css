@@ -1,5 +1,5 @@
 body {
-    background-image: url("/images/website\ Art\ 2.png");
+    background-image: url("images/website\ Art\ 2.png");
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: scroll; /* enable vertical scrolling */
