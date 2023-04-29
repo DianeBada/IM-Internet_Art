@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+
+}
 body {
-    background-image: url("images/website\ Art\ 4.png");
+
+    background-image: url("images/Website\ Art\ 4.png");
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: scroll; /* enable vertical scrolling */
@@ -192,7 +199,6 @@ body {
       height: 100%;
       object-fit: cover;
       }
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oleo+Script+Swash+Caps&family=Playfair+Display&family=Roboto:ital,wght@1,300&display=swap');
       *,*::before,*::after {
         box-sizing: border-box;
       }
