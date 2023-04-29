@@ -7,7 +7,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: scroll; /* enable vertical scrolling */
-    
+
 
   }
   * {
@@ -482,5 +482,13 @@ footer p{
   }
 }
 
-
+.style-container {
+      background-color: #212020;
+      border-radius: 10px;
+      padding: 60px;
+      margin: auto;
+      max-width: 8000px;
+      text-align: center;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
 
