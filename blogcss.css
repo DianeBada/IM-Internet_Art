@@ -98,7 +98,9 @@ header.shadow .logo{
 }
 
 
-
+body{
+    background-color: #ddd;
+}
 
 .home{
     width: 100%;
@@ -276,13 +278,14 @@ header.shadow .logo{
 footer{
     position: relative;
     width: 100%;
-    height: auto;
-    padding: 50px 100px;
-    margin-top: 3rem;
-    background: #111;
+    height: 50%;
+    padding: 1px 11px;
+    margin-top: 1rem;
+    background: #333;
     display: flex;
     font-family: sans-serif;
     justify-content: space-between;
+    padding-bottom: -90px;
 }
 
 .footer-container{
@@ -290,6 +293,8 @@ footer{
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
+    padding-top: 1px;
+    padding-bottom: 2px;
 }
 
 .footer-container .sec{

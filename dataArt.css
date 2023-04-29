@@ -57,3 +57,172 @@ color: white;
 text-shadow: 2px 2px black;
 opacity: 0;
 }
+footer{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding: 1px 11px;
+  margin-top: 1rem;
+  background: #333;
+  display: flex;
+  font-family: sans-serif;
+  justify-content: space-between;
+  padding-bottom: -90px;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top: 1px;
+  padding-bottom: 2px;
+}
+
+.footer-container .sec{
+  margin-right: 30px;
+}
+
+.footer-container .sec.aboutus{
+  width: 40%;
+}
+
+.footer-container h2{
+  position: relative;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-container h2::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: rgb(77, 228, 255);
+}
+
+footer p{
+  color: #fff;
+}
+
+.sci{
+  margin: 20px;
+  display: flex;
+}
+
+.sci li{
+  list-style: none;
+}
+
+.sci li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: .5s;
+}
+
+.sci li a:hover{
+  background: rgb(77, 228, 255);
+}
+
+.sci i a .bx{
+  color: #fff;
+  font-size: 20px;
+}
+
+.quicklinks{
+  position: relative;
+  width: 25%;
+}
+
+.quicklinks ul li{
+  list-style: none;
+}
+
+.quicklinks ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: .3s;
+}
+
+.quicklinks ul li a:hover{
+  color: #fff;
+}
+
+.footer-container .contactBx{
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+
+.contactBx .info{
+  position: relative;
+}
+
+.contactBx .info li{
+  display: flex !important;
+  margin-bottom: 16px;
+}
+
+.contactBx .info li span:nth-child(1){
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contactBx .info li span{
+  color: #999;
+}
+
+.contactBx .info li a{
+  color: #999;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.contactBx .info li a:hover{
+  color: #fff;
+}
+@media (max-width: 991px){
+  footer{
+      padding: 40px;
+      font-size: 20px;
+  }
+
+  footer .footer-container{
+      flex-direction: column;
+  }
+
+  footer .footer-container .sec{
+      margin-right: 0;
+      margin-bottom: 40px;
+  }
+
+  footer .footer-container .sec.aboutus{
+      width: 100% !important;
+  }
+
+  footer .footer-container .quicklinks{
+      width: 100%;
+  }
+
+  footer .footer-container .contactBx{
+      width: 100%;
+  }
+}
+
+*{
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
