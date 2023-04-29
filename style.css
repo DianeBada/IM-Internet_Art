@@ -1,19 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
+ 
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins';
 }
 
 .hero {
+  
   width: 100%;
-  max-width: 1500px;
+  max-width: 1600px;
   height: 100vh;
   background-image: url(images/IM\ Front\ Page\ Pic.png);
   background-size: cover;
-  background-position: center;
+  background-position:center;
   position: relative;
   overflow: hidden;
+  object-fit: cover;
 }
 
 
@@ -21,6 +24,8 @@
 body {
   overflow-y: scroll; /* enable vertical scrolling */
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 
 }
 
@@ -30,11 +35,14 @@ body {
   overflow: hidden;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  font: "Poppins";
+
 }
 
 .navbar ul {
