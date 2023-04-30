@@ -3,6 +3,7 @@
     font-family: 'Poppins', sans-serif;
     /* margin: 0;
     padding: 0; */
+    left: 0;
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
     box-sizing: border-box;
@@ -99,7 +100,7 @@ header.shadow .logo{
 
 
 body{
-    background-color: #ddd;
+    background: linear-gradient(to bottom right, #FF8C00, #FF0080, #8B008B, #1E90FF, #00FF00);
 }
 
 .home{
