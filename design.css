@@ -317,6 +317,7 @@ color-palette {
   background-color: #900C3F;
 }
 
+
 footer{
   position: relative;
   width: 100%;
@@ -328,6 +329,9 @@ footer{
   font-family: sans-serif;
   justify-content: space-between;
   padding-bottom: -90px;
+  left: 0;
+  bottom: 0;
+
 }
 
 .footer-container{
@@ -337,7 +341,10 @@ footer{
   flex-direction: row;
   padding-top: 1px;
   padding-bottom: 2px;
+  left: 0;
+  bottom: 0;
 }
+
 
 .footer-container .sec{
   margin-right: 30px;

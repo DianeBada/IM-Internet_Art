@@ -276,6 +276,7 @@ body{
     font-weight: 500;
 }
 
+
 footer{
     position: relative;
     width: 100%;
@@ -287,16 +288,22 @@ footer{
     font-family: sans-serif;
     justify-content: space-between;
     padding-bottom: -90px;
-}
-
-.footer-container{
+    left: 0;
+    bottom: 0;
+  
+  }
+  
+  .footer-container{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
     padding-top: 1px;
     padding-bottom: 2px;
-}
+    left: 0;
+    bottom: 0;
+  }
+  
 
 .footer-container .sec{
     margin-right: 30px;
